@@ -1,0 +1,18 @@
+server:
+  port: 9001
+  servlet:
+    application-display-name: provide
+    context-path: /provide
+spring:
+  #给项目来个名字
+  application:
+    name: rabbitmq-provider
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /  #虚拟host 可以不设置,使用server默认host
+    publisher-returns: true #开启发送端消息抵达队列确认
+    publisher-confirm-type: correlated #开启发送端确认

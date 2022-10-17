@@ -1,0 +1,51 @@
+package com.sjbmybatis.pojo;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+
+/**
+ * @author pdai
+ */
+@Getter
+@Setter
+@ToString
+public class Role implements BaseEntity {
+
+    /**
+     * role id.
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    /**
+     * role name.
+     */
+    private String name;
+
+    /**
+     * role key.
+     */
+    private String roleKey;
+
+    /**
+     * description.
+     */
+    private String description;
+
+    /**
+     * create date time.
+     */
+    private LocalDateTime createTime;
+
+    /**
+     * update date time.
+     */
+    private LocalDateTime updateTime;
+
+}

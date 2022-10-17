@@ -1,0 +1,44 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+/eurkaServer/.mvn/wrapper/
+/.idea/jarRepositories.xml
+/.idea/libraries/
+/.idea/compiler.xml
+/.idea/dictionaries
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/qaplug_profiles.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.mvn/wrapper/

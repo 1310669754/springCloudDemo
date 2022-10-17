@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.111.208:3306/sjb?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&useSSL=false
+    username: root
+    password: 123456
+    initial-size: 20
+    max-idle: 60
+    max-wait: 10000
+    min-idle: 10
+    max-active: 200
+  jpa:  #JPA配置
+    generate-ddl: false
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        use-new-id-generator-mappings: false
+
+mybatis:
+  mapper-locations: com/sjbmybatis/mapper/*.xml
+#  mapper-locations: classpath*:com/sjbmybatis/mapper/*.xml
+  type-aliases-package: com.sjbmybatis.pojo
+  configuration:
+    cache-enabled: true
+    use-generated-keys: true
+    default-executor-type: REUSE
+    use-actual-param-name: true
